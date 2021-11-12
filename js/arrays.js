@@ -6,16 +6,15 @@ class Producto {
     }
 }
 
-// Array donde almaceno mis objetos
 const productos = [];
 const carrito = [];
 
-// Objetos de mi aplicación
+
 productos.push(new Producto('Detergente', 'Limpieza', 140));
 productos.push(new Producto('Lavandina', 'Limpieza', 250));
 productos.push(new Producto('Cafe', 'Alimentos', 400));
 
-// Función para mostrar los productos disponibles
+//Productos disponibles
 const verProductos = (productos) => {
     let texto = '';
     for (const producto of productos) {
@@ -25,7 +24,7 @@ const verProductos = (productos) => {
     return texto;
 }
 
-// Función que le permite al usuario comprar un producto
+
 const comprar = () => {
     const productoUsuario = prompt(`¿Qué producto desea comprar?\n\n${verProductos(productos)}`);
     // productos.find((producto) => {
@@ -40,7 +39,7 @@ const comprar = () => {
     }
 }
 
-// Función para mostrar los productos en el carrito
+
 const mostrarCarrito = () => {
     const productosCarrito = verProductos(carrito);
     if (productosCarrito) {
